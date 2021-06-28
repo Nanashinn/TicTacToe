@@ -51,7 +51,7 @@ namespace TicTacToe
 
         private void CheckPlay()
         {
-            if (ChecarDirecoes())
+            if (CheckDirections())
                 BroadcastWinner(_turnLetter);
             else if (_plays == 9)
             {
@@ -60,7 +60,7 @@ namespace TicTacToe
             }
         }
 
-        private bool ChecarDirecoes()
+        private bool CheckDirections()
            => CheckHorizontal() || CheckVerticals() || CheckDiagonals();
 
         private bool CheckHorizontal()
